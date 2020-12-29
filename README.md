@@ -1,0 +1,3 @@
+This is a data analytics tool that scrapes data from reddit and displays sentiment analysis data
+about a given stock ticker in addition to other useful information gathered from the Yahoo Finance API into a small Flask Webapp.
+
