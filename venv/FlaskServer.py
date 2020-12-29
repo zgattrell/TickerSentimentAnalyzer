@@ -22,8 +22,12 @@ def search():
         j = getTickerData(ticker)
         #Use the stock name gather from the yahoo finance api to search for sentiment
         stockName = j['quoteType']['shortName']
-        sentimentChartUrl = StockPredictor.getSentimentChart(ticker, stockName)
-
+        subReddit = "stocks"
+        df = StockPredictor.getDataframe(ticker, stockName, subReddit)
+        sentimentChartUrl = StockPredictor.getSentimentChart(df, ticker)
+        datapoints = len(df.index)
+        sentimentSource = subReddit
+        sentimentMean = df['Overall_Post_Sentiment'].mean()
 
         return render_template("search.html",
                                c_Name=stockName,
@@ -33,7 +37,10 @@ def search():
                                c_Industry=j['assetProfile']['industry'],
                                c_Description=j['assetProfile']['longBusinessSummary'],
                                c_EmployeeNumber=j['assetProfile']['fullTimeEmployees'],
-                               c_Sent_Chart = sentimentChartUrl
+                               c_Sent_Chart = sentimentChartUrl,
+                               c_Datapoints = datapoints,
+                               c_sentimentSource = subReddit,
+                               c_sentimentMean = sentimentMean
                                )
         #return "Sentiment for " + ticker + " is " + str(StockPredictor.getTickerSentimentTest(ticker)) + str(j['quoteType']['shortName'])
 
