@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Template</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+    <style>
+            body {
+                text-align: center;
+                background: #466368;
+                background: -webkit-linear-gradient(#a1d3b0, #f6f1d5);
+                background:    -moz-linear-gradient(#a1d3b0, #f6f1d5);
+                background:         linear-gradient(#a1d3b0, #f6f1d5);
+            }
+            .column {
+                float: left;
+                width: 50%;
+            }
+            .row:after {
+                content: "";
+                display: table;
+                clear: both;
+                }
+    </style>
+</head>
+<body>
+    <h1>Stock Sentiment Analyser</h1>
+    <p>A Project by Zachary Gattrell</p>
+    <hr/>
+<div class = "row">
+    <div class="column">
+        <h3>{{c_Name}}({{c_Ticker}})</h3>
+        <h4>${{c_Price}}</h4>
+
+        <img src="{{c_Sent_Chart}}" width="500">
+
+    </div>
+    <div class="column">
+        <p>
+            <h4>Sentiment Analysis</h4>
+            Sentiment Source:
+            <br/>
+            Overall Sentiment:
+            <br/>
+            Comment Sentiment:
+            <br/>
+            # of DataPoints:
+            <hr/>
+            <h4>Company Information</h4>
+            Sector: {{c_Sector}}
+            <br/>
+            Industry: {{c_Industry}}
+            <br/>
+            # of Employees: {{c_EmployeeNumber}}
+        <hr>
+        {{c_Description}}
+        </p>
+    </div>
+</div>
+</body>
+</html>

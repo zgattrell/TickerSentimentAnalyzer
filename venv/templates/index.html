@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" crossorigin="anonymous">
+        <style>
+            body {
+                text-align: center;
+                background: #466368;
+                background: -webkit-linear-gradient(#a1d3b0, #f6f1d5);
+                background:    -moz-linear-gradient(#a1d3b0, #f6f1d5);
+                background:         linear-gradient(#a1d3b0, #f6f1d5);
+            }
+        </style>
+    </head>
+   <body>
+   <h1>Stock Sentiment Analyser</h1>
+   <p>A Project by Zachary Gattrell</p>
+   <hr/>
+      <form action = "http://localhost:5000/search" method = "get" class="pure-form">
+         <p>Enter Ticker:</p>
+         <p><input type="text" name="ticker" /></p>
+         <p><input type="submit" value="submit" class="pure-button pure-button-primary"/></p>
+      </form>
+   </body>
+</html>
