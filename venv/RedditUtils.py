@@ -12,7 +12,7 @@ def getDataframe(arg1, arg2, arg3):
 #arg1=subreddit arg2=ticker item arg3=search item
 def getPost(arg1, arg2, arg3):
     #initialize the reddit client with credentials
-    reddit = praw.Reddit(client_id='i8JhhqMQafcZZw', client_secret='kNJ7rn5LNBTYasgzg0IT7HejjI8',
+    reddit = praw.Reddit(client_id='CLIENT_ID', client_secret='CLIENT_SECRET',
                          user_agent='MemeScraper1.0')
     #select the subreddit we are going to be scanning through
     subreddit = reddit.subreddit(arg1)
