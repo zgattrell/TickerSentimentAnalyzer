@@ -53,7 +53,7 @@ def getTickerData(arg1):
     querystring = {"symbol": arg1, "region": "US"}
 
     headers = {
-        'x-rapidapi-key': "782cbae115mshc02532c0c330f34p192743jsn123f582f2223",
+        'x-rapidapi-key': "APIKEYHERE",
         'x-rapidapi-host': "apidojo-yahoo-finance-v1.p.rapidapi.com"
     }
 
